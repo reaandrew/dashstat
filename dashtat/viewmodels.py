@@ -35,7 +35,10 @@ class PullsViewModelFactory:
                 'count': y,
                 'className': self.getClassNameForDays(x)
             } for x,y in pulls.iteritems())
+
+
             if len(pulls) > 0:
+                print(repo_model['name'], repo_model['pulls'])
                 viewmodel.append(repo_model)
 
         return viewmodel

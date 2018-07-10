@@ -7,8 +7,8 @@ from dateutil.parser import parse
 import falcon
 import json
 
-from services import GithubService
-from resources import PullRequestsResource
+from dashtat.services import GithubService
+from dashtat.resources import PullRequestsResource
 
 import falcon
 

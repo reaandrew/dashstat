@@ -1,8 +1,8 @@
 import falcon
 import pystache
 import json
-from views.pulls_view import PullsView
-from viewmodels import PullsViewModelFactory
+from dashtat.views.pulls_view import PullsView
+from dashtat.viewmodels import PullsViewModelFactory
 
 class PullRequestsResource(object):
     def __init__(self, org, service):
@@ -16,7 +16,7 @@ class PullRequestsResource(object):
         resp.content_type = 'text/html'
         resp.status = falcon.HTTP_200  # This is the default status
 
-        renderer = pystache.Renderer(search_dirs='./views')
+        renderer = pystache.Renderer(search_dirs='./dashtat/views')
         view = PullsView(viewmodel)
 
         resp.body = renderer.render(view)
