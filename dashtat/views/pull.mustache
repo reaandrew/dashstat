@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-3 align-self-center">
+        <span>{{name}}</span>
+    </div>
+    {{#pulls}}
+        <div class="col-1 {{className}}">
+            <div class="row">
+                <div class="col text-center">
+                   {{days}} days
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center">{{count}}</h1>
+                </div>
+            </div>
+        </div>
+    {{/pulls}}
+</div>

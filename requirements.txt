@@ -1,0 +1,15 @@
+requests
+humanize
+falcon
+pystache
+flask
+flask_testing
+autoflake
+autopep8
+pylint
+pytest
+coverage
+requests_cache
+gunicorn
+supervisor
+msgpack
