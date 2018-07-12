@@ -7,7 +7,6 @@ import (
 	"time"
 
 	"github.com/urfave/cli"
-    "github.com/gin-gonic/gin"
 )
 
 var (
@@ -15,15 +14,6 @@ var (
     org string
 )
 
-func GetRouter() (r *gin.Engine) {
-	r = gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-    return
-}
 
 func run(){
     r := GetRouter()
