@@ -1,5 +1,7 @@
 package main
 
+const AppName = "dashtat"
+const AppUsage = "Some Dashboard Views Server"
 const AppHelpText = `NAME:
 	{{.Name}} - {{.Usage}}
 	USAGE:

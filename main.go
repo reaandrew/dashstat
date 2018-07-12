@@ -15,18 +15,23 @@ var (
     org string
 )
 
-func run(){
-	r := gin.Default()
+func GetRouter() (r *gin.Engine) {
+	r = gin.Default()
 	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "pong",
 		})
 	})
+    return
+}
+
+func run(){
+    r := GetRouter()
 	r.Run()
 }
 
-func main() {
-	app := cli.NewApp()
+func CreateApp() (app *cli.App){
+	app = cli.NewApp()
 	app.CustomAppHelpTemplate = AppHelpText
 	app.Name = "dashtat"
 	app.Usage = "Some Dashboard Views Server"
@@ -54,7 +59,11 @@ func main() {
 		run()
 		return nil
 	}
+    return
+}
 
+func main() {
+    app := CreateApp()
 	err := app.Run(os.Args)
 	if err != nil {
 		log.Fatal(err)
